@@ -1,5 +1,6 @@
 package com.example.myfirstas;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,7 +10,12 @@ import com.samsung.android.sdk.blockchain.CoinType;
 import com.samsung.android.sdk.blockchain.ListenableFutureTask;
 import com.samsung.android.sdk.blockchain.SBlockchain;
 import com.samsung.android.sdk.blockchain.account.Account;
+import com.samsung.android.sdk.blockchain.account.AccountManager;
+import com.samsung.android.sdk.blockchain.account.ethereum.EthereumAccount;
 import com.samsung.android.sdk.blockchain.coinservice.CoinNetworkInfo;
+import com.samsung.android.sdk.blockchain.coinservice.CoinService;
+import com.samsung.android.sdk.blockchain.coinservice.CoinServiceFactory;
+import com.samsung.android.sdk.blockchain.coinservice.ethereum.EthereumService;
 import com.samsung.android.sdk.blockchain.exception.AccountException;
 import com.samsung.android.sdk.blockchain.exception.RemoteClientException;
 import com.samsung.android.sdk.blockchain.exception.RootSeedChangedException;
@@ -18,6 +24,7 @@ import com.samsung.android.sdk.blockchain.network.EthereumNetworkType;
 import com.samsung.android.sdk.blockchain.wallet.HardwareWallet;
 import com.samsung.android.sdk.blockchain.wallet.HardwareWalletType;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -29,6 +36,8 @@ import android.widget.Button;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.math.BigInteger;
+import java.net.CookiePolicy;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -88,6 +97,47 @@ public class MainActivity extends AppCompatActivity {
                 getAccounts();
             }
         });
+
+        paymentBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                payment();
+            }
+        });
+    }
+    private void payment(){
+        CoinNetworkInfo coinNetworkInfo = new CoinNetworkInfo(
+                CoinType.ETH,
+                EthereumNetworkType.ROPSTEN,
+                "https://ropsten.infura.io/v3/c390e494bf26472ab6cf48f14be05495"
+        );
+        List<Account> accounts = sBlockchain.getAccountManager()
+                .getAccounts(
+                        wallet.getWalletId(),
+                        CoinType.ETH,
+                        EthereumNetworkType.ROPSTEN
+                );
+
+        EthereumService service = (EthereumService) CoinServiceFactory.getCoinService(  getApplicationContext(), coinNetworkInfo);
+        Intent intent = service
+                 .createEthereumPaymentSheetActivityIntent(
+                         this,
+                         wallet,
+                         (EthereumAccount) accounts.get(0),
+                         "0x0f63c51Ff21FABF34d796acF3F074B5592DD9F19",
+                         new BigInteger("1000000000000000"),
+                         null,
+                         null
+
+
+                 );
+
+        startActivityForResult(intent,0);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void getAccounts(){
