@@ -12,10 +12,12 @@
     android:gravity="center">
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="이겼닭! 오늘은 치킨이닭!"
         android:layout_margin="100dp"
+        android:textSize="12pt"
         tools:layout_editor_absoluteX="133dp"
         tools:layout_editor_absoluteY="214dp" />
 
