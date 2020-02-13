@@ -80,7 +80,7 @@ public class WaitRoom extends AppCompatActivity implements OnSendTransactionList
         paymentBtn = findViewById(R.id.ready);
 
         // 지드래곤 닉네임 터치 시 지갑 연동
-        connectgdragonBtn =findViewById(R.id.connect_gdraagon);
+        connectgdragonBtn =findViewById(R.id.connect_dragon);
 
         connectgdragonBtn.setOnClickListener(new View.OnClickListener() {
             @Override
