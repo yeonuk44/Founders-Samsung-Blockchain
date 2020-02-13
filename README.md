@@ -7,11 +7,12 @@ Prepare Hackathon
 
 ## 기획팀 to do list
 - [ ] 사업계획서
-- [ ] PPT
-- [ ] BM 설계
-- [ ] 재무재표
+- [x] PPT
+- [x] BM 설계
+- [x] 재무재표
 - [x] Logo design
 - [ ] 영상 편집
+- [ ] Team logo design
 
 ### business plan
 #### write : OH-dong99
