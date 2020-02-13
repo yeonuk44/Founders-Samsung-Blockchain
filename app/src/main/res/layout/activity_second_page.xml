@@ -20,6 +20,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
             android:text="게임 참여하기 버튼"
+
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="203dp" />
 
