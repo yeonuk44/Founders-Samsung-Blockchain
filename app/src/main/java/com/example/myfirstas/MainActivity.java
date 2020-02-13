@@ -2,6 +2,8 @@ package com.example.myfirstas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -43,6 +45,7 @@ import android.widget.Checkable;
 import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
+import org.web3j.abi.datatypes.Int;
 
 import java.math.BigInteger;
 import java.net.CookiePolicy;
@@ -52,7 +55,26 @@ import java.util.concurrent.ExecutionException;
 
 import jnr.ffi.annotations.In;
 
+
+
 public class MainActivity extends AppCompatActivity implements OnSendTransactionListener {
+
+
+
+
+    Handler handler = new Handler();
+    Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            // 1초 뒤 다음 하면 넘어가기
+            Intent intent = new Intent(getApplicationContext(), FirstPage.class);
+            startActivity(intent); // 다음 화면 넘어가기
+            finish();
+        }
+    };
+
+
+
 
     Button nextpageBtn;
     Button FirstPageBtn;
@@ -78,9 +100,13 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_main);
+        setContentView(R.layout.content_main); // xml 과 java 소스를 연
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+
 
 
         sBlockchain = new SBlockchain();
@@ -175,6 +201,19 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
 
     }
 
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        // 다시 화면에 들어왔을 때 예약 걸어주기
+        handler.postDelayed(r, 1000); // 1초 뒤에 Runnable 객체 수
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        // 화면을 벗어나면, handler 에 예약해놓은 작업 취소.
+    }
 
 
 
