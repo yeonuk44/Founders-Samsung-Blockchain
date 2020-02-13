@@ -36,7 +36,8 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="name : G-daragon"
+                android:text="name : G-draagon"
+                android:id="@+id/connect_gdraagon"
                 android:textSize="7pt"/>
 
 
@@ -134,6 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="준비완료"
+            android:id="@+id/ready"
             android:textSize="8pt"/>
 
 
