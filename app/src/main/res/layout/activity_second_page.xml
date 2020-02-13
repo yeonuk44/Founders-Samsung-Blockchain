@@ -63,5 +63,10 @@
                 tools:layout_editor_absoluteX="261dp"
                 tools:layout_editor_absoluteY="636dp" />
         </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
