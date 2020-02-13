@@ -18,7 +18,7 @@ public class FirstPage extends AppCompatActivity {
     Runnable r = new Runnable() {
         @Override
         public void run() {
-            // 1초 뒤 다음 화면 넘어가기
+            // 2초 뒤 다음 화면 넘어가기
             Intent intent = new Intent(getApplicationContext(), NameSet.class);
             startActivity(intent); // 다음 화면 넘어가기
             finish();
@@ -38,7 +38,7 @@ public class FirstPage extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         // 다시 화면에 들어왔을 때 예약 걸어주기
-        handler.postDelayed(r, 1000); // 1초 뒤에 Runnable 객체 수행
+        handler.postDelayed(r, 2000); // 2초 뒤에 Runnable 객체 수행
     }
 
     @Override
