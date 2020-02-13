@@ -10,7 +10,7 @@
         android:id="@+id/button10"
         android:layout_width="239dp"
         android:layout_height="45dp"
-        android:text="방4"
+        android:text="방4 > 이 버튼을 킃릭하면 지갑연동+결제"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="505dp" />
 
