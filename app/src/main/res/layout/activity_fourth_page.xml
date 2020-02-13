@@ -25,7 +25,7 @@
         android:layout_width="239dp"
         android:layout_height="45dp"
         android:layout_marginBottom="50dp"
-        android:text="방1"
+        android:text="피자 : 30000원 | 인원 : 1/5"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="505dp" />
 
@@ -34,7 +34,7 @@
         android:layout_marginBottom="50dp"
         android:layout_width="239dp"
         android:layout_height="45dp"
-        android:text="방2"
+        android:text="치킨 : 25000원 | 인원 : 4/5"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="198dp" />
 
@@ -43,7 +43,7 @@
         android:layout_marginBottom="50dp"
         android:layout_width="239dp"
         android:layout_height="45dp"
-        android:text="방3"
+        android:text="아이스크림 : 18000원 | 인원 : 3/4"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="296dp" />
 
@@ -52,7 +52,7 @@
         android:layout_marginBottom="50dp"
         android:layout_width="239dp"
         android:layout_height="45dp"
-        android:text="방4"
+        android:text="장어 : 50000원 | 인원 : 4/10"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="395dp" />
 

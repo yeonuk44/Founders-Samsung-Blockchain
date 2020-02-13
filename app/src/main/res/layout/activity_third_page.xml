@@ -50,16 +50,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="25dp"
-            android:text="선물 선택하기" />
+            android:text="갖고 싶은 보물 선택하기" />
 
 
-        <Button
-            android:id="@+id/button5"
+        <Spinner
+            android:id="@+id/itemSelect"
             android:layout_width="192dp"
             android:layout_height="41dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="170dp"
-            android:text="여기다가 콤보박스 추가 예정" />
+            android:layout_marginBottom="170dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
