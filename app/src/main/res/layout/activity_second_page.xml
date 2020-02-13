@@ -19,9 +19,13 @@
             android:layout_height="105dp"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="게임 참여하기 버튼"
+            android:text="스겜하러 가기"
             tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="203dp" />
+            tools:layout_editor_absoluteY="203dp"
+            android:background="@drawable/buttonbackground"
+            android:fontFamily="@font/jalnan"
+            android:textSize="30dp"
+            />
 
         <Button
             android:id="@+id/createroom"
