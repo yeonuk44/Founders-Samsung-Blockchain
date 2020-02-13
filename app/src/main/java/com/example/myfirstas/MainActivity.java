@@ -2,6 +2,8 @@ package com.example.myfirstas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -36,6 +38,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Checkable;
+import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -50,20 +55,23 @@ import jnr.ffi.annotations.In;
 public class MainActivity extends AppCompatActivity implements OnSendTransactionListener {
 
     Button nextpageBtn;
+    Button FirstPageBtn;
     Button connectBtn;
-    //Button generateAccountBtn;
-    Button getAccountsBtn;
     Button paymentBtn;
-    Button sendsmartcontractapiBtn;
-    Button cucumverBtn;
-    Button webviewerBtn;
+
+    CheckBox cb1;
+    CheckBox cb2;
+    CheckBox cb3;
+    CheckBox cb4;
+    Button checkBtn;
+    TextView checkResult;
+
+    Spinner yearSpinner;
+    Spinner monthSpinner;
+
 
     SBlockchain sBlockchain = new SBlockchain();
-
-    private CucumberWebView webView;
     private HardwareWallet wallet;
-    private Account mAccount;
-
 
 
 
@@ -77,62 +85,46 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
 
         sBlockchain = new SBlockchain();
         try {
-            sBlockchain.initialize( this);
+            sBlockchain.initialize(this);
 
-        } catch (SsdkUnsupportedException e ) {
+        } catch (SsdkUnsupportedException e) {
             e.printStackTrace();
         }
 
         nextpageBtn = findViewById(R.id.nextpage);
+        FirstPageBtn = findViewById(R.id.FirstPage);
 
+
+        // 체크 박스 정의
+        cb1 = (CheckBox) findViewById(R.id.checkBox1);
+        cb2 = (CheckBox) findViewById(R.id.checkBox2);
+        cb3 = (CheckBox) findViewById(R.id.checkBox3);
+        cb4 = (CheckBox) findViewById(R.id.checkBox4);
+        checkBtn = findViewById(R.id.checkbtn);
+        checkResult = findViewById(R.id.checkresult);
+
+
+        // 지갑의 사용을 위한 connectBtn
         connectBtn = findViewById(R.id.connect);
 
 
+        // year Spinner 정의
+        yearSpinner = (Spinner)findViewById(R.id.spinner_year);
+        ArrayAdapter yearAdapter = ArrayAdapter.createFromResource(this, R.array.date_year, android.R.layout.simple_spinner_item);
+        yearAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        yearSpinner.setAdapter(yearAdapter);
+
+        // month Spinner 정의
+        monthSpinner = (Spinner)findViewById(R.id.spinner_month);
+        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item);
+        monthAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        monthSpinner.setAdapter(monthAdapter);
+
+
+
         //generateAccountBtn = findViewById(R.id.generateAccount);
-        getAccountsBtn = findViewById(R.id.getAccount);
         paymentBtn = findViewById(R.id.payment);
-        sendsmartcontractapiBtn = findViewById(R.id.sendsmartcontractapi);
-        cucumverBtn = findViewById(R.id.cucumverwebview);
-        webviewerBtn = findViewById(R.id.webviewer);
 
-
-
-        cucumverBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CoinNetworkInfo coinNetworkInfo = new CoinNetworkInfo(
-                        CoinType.ETH,
-                        EthereumNetworkType.ROPSTEN,
-                        "https://ropsten.infura.io/v3/c390e494bf26472ab6cf48f14be05495"
-                );
-                List<Account> accounts = sBlockchain.getAccountManager()
-                        .getAccounts(
-                                wallet.getWalletId(),
-                                CoinType.ETH,
-                                EthereumNetworkType.ROPSTEN
-                        );
-
-
-            }
-        });
-
-//        webviewerBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                CoinNetworkInfo coinNetworkInfo = new CoinNetworkInfo(
-//                        CoinType.ETH,
-//                        EthereumNetworkType.ROPSTEN,
-//                        "https://ropsten.infura.io/v3/c390e494bf26472ab6cf48f14be05495"
-//                );
-//                List<Account> accounts = sBlockchain.getAccountManager()
-//                        .getAccounts(
-//                                wallet.getWalletId(),
-//                                CoinType.ETH,
-//                                EthereumNetworkType.ROPSTEN
-//                        );
-////                webView.init(ethereum.)
-//            }
-//        });
 
         nextpageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,6 +134,28 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
             }
         });
 
+        FirstPageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), FirstPage.class);
+                startActivity(intent);
+            }
+        });
+
+        checkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String result =  ""; //결과를 출력할 문자열 , 항상 스트링을 빈문자열로 초기화할 것
+                if (cb1.isChecked() == true) result += cb1.getText().toString();
+                if (cb2.isChecked() == true) result += cb2.getText().toString();
+                if (cb3.isChecked() == true) result += cb3.getText().toString();
+                if (cb4.isChecked() == true) result += cb4.getText().toString();
+                checkResult.setText("선택결과 : " + result);
+
+            } // end onClick
+        }); // end setOnClickListener
+
+
         connectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,20 +163,6 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
             }
         });
 
-//        generateAccountBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                generate();
-//
-//            }
-//        });
-
-        getAccountsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getAccounts();
-            }
-        });
 
         paymentBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -208,17 +208,16 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
         startActivityForResult(intent,0);
     }
 
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void getAccounts(){
-        List<Account> accounts = sBlockchain.getAccountManager()
-                .getAccounts(wallet.getWalletId(), CoinType.ETH, EthereumNetworkType.ROPSTEN);
-        Log.d("Myapp", Arrays.toString(new List[]{accounts}));
 
-    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -226,6 +225,9 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
+
 
     private void connect(){
         sBlockchain.getHardwareWalletManager()
@@ -248,36 +250,6 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
                 });
     }
 
-//    private void generate(){
-//        CoinNetworkInfo coinNetworkInfo = new CoinNetworkInfo(
-//                CoinType.ETH,
-//                EthereumNetworkType.ROPSTEN,
-//                "https://ropsten.infura.io/v3/c390e494bf26472ab6cf48f14be05495"
-//        );
-//
-//        sBlockchain.getAccountManager()
-//                .generateNewAccount(wallet,coinNetworkInfo)
-//                .setCallback(new ListenableFutureTask.Callback<Account>() {
-//                    @Override
-//                    public void onSuccess(Account account) {
-//                        mAccount = account;
-//                        Log.d("MyApp",account.toString());
-//                    }
-//
-//                    @Override
-//                    public void onFailure(@NotNull ExecutionException e) {
-//                        Log.d("MyApp",e.getMessage());
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NotNull InterruptedException e) {
-//
-//                    }
-//                });
-//
-//        }
-
-
 
 
     @Override
@@ -296,7 +268,12 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
     }
 
     @Override
-    public void onSendTransaction(@NotNull String s, @NotNull EthereumAccount ethereumAccount, @NotNull String s1, @org.jetbrains.annotations.Nullable BigInteger bigInteger, @org.jetbrains.annotations.Nullable String s2, @org.jetbrains.annotations.Nullable BigInteger bigInteger1) {
+    public void onSendTransaction(@NotNull String s,
+                                  @NotNull EthereumAccount ethereumAccount,
+                                  @NotNull String s1,
+                                  @org.jetbrains.annotations.Nullable BigInteger bigInteger,
+                                  @org.jetbrains.annotations.Nullable String s2,
+                                  @org.jetbrains.annotations.Nullable BigInteger bigInteger1) {
 
     }
 }
