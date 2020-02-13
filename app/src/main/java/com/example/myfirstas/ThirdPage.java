@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+
 
 public class ThirdPage extends AppCompatActivity {
 
@@ -24,6 +27,15 @@ public class ThirdPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_page);
 
+        // Spinner
+        Spinner itemSpinner = (Spinner)findViewById(R.id.itemSelect);
+        ArrayAdapter itemAdapter =ArrayAdapter.createFromResource(this,
+                R.array.itemselect, android.R.layout.simple_spinner_item);
+            itemAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        itemSpinner.setAdapter(itemAdapter);
+
+
+        // Seekbar
         seekBar = (SeekBar) findViewById(R.id.mseekbar);
         tvOut = (TextView) findViewById(R.id.tvout);
 

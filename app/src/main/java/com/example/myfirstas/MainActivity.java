@@ -134,17 +134,17 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
         connectBtn = findViewById(R.id.connect);
 
 
-        // year Spinner 정의
-        yearSpinner = (Spinner)findViewById(R.id.spinner_year);
-        ArrayAdapter yearAdapter = ArrayAdapter.createFromResource(this, R.array.date_year, android.R.layout.simple_spinner_item);
-        yearAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        yearSpinner.setAdapter(yearAdapter);
-
-        // month Spinner 정의
-        monthSpinner = (Spinner)findViewById(R.id.spinner_month);
-        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item);
-        monthAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        monthSpinner.setAdapter(monthAdapter);
+//        // year Spinner 정의
+//        yearSpinner = (Spinner)findViewById(R.id.spinner_year);
+//        ArrayAdapter yearAdapter = ArrayAdapter.createFromResource(this, R.array.date_year, android.R.layout.simple_spinner_item);
+//        yearAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+//        yearSpinner.setAdapter(yearAdapter);
+//
+//        // month Spinner 정의
+//        monthSpinner = (Spinner)findViewById(R.id.spinner_month);
+//        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item);
+//        monthAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+//        monthSpinner.setAdapter(monthAdapter);
 
 
 
