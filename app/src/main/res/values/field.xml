@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinnerArray">
+
+        <item> 인원을 선택해주세요. </item>
+
+        <item> 3 </item>
+
+        <item> 5 </item>
+
+        <item> 7 </item>
+
+        <item> 9 </item>
+
+        <item> 11 </item>
+
+    </string-array>
+
+
+</resources>

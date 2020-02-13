@@ -5,17 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ThirdPage">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="인원 선택하기"
-        android:layout_margin="125dp"
-        android:layout_gravity="center"
         tools:layout_editor_absoluteX="165dp"
         tools:layout_editor_absoluteY="178dp" />
 
@@ -24,8 +19,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="선물 선택하기"
-        android:layout_margin="25dp"
-        android:layout_gravity="center"
         tools:layout_editor_absoluteX="165dp"
         tools:layout_editor_absoluteY="341dp" />
 
@@ -35,21 +28,14 @@
         android:layout_width="192dp"
         android:layout_height="41dp"
         android:text="여기다가 콤보박스 추가 예정"
-        android:layout_marginBottom="170dp"
-        android:layout_gravity="center"
         tools:layout_editor_absoluteX="109dp"
         tools:layout_editor_absoluteY="393dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
     <Button
-        android:id="@+id/thirdtosecond"
+        android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" prev"
-        android:layout_margin="60dp"
         tools:layout_editor_absoluteX="65dp"
         tools:layout_editor_absoluteY="629dp" />
 
@@ -58,10 +44,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="next "
-        android:layout_margin="60dp"
         tools:layout_editor_absoluteX="246dp"
         tools:layout_editor_absoluteY="629dp" />
-</LinearLayout>
-</LinearLayout>
+
+
+    <!--    <LinearLayout-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#FFFFFF">-->
+
+<!--        <Spinner-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/spinner_field"-->
+<!--            android:spinnerMode="dropdown"-->
+<!--            android:background="@drawable/editbox"-->
+<!--            android:textColor="@color/black"/>-->
+
+<!--    </LinearLayout>-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
