@@ -18,8 +18,8 @@ public class FirstPage extends AppCompatActivity {
     Runnable r = new Runnable() {
         @Override
         public void run() {
-            // 4초 뒤 다음 화면 넘어가기
-            Intent intent = new Intent(getApplicationContext(), subtitle.class);
+            // 1초 뒤 다음 화면 넘어가기
+            Intent intent = new Intent(getApplicationContext(), SecondPage.class);
             startActivity(intent); // 다음 화면 넘어가기
             finish();
 
