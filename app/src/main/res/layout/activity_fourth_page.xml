@@ -5,52 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FourthPage">
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="239dp"
-        android:layout_height="45dp"
-        android:text="방4"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="505dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="239dp"
-        android:layout_height="45dp"
-        android:text="방1"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="198dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="239dp"
-        android:layout_height="45dp"
-        android:text="방2"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="296dp" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="239dp"
-        android:layout_height="45dp"
-        android:text="방3"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="395dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="212dp"
         android:layout_height="22dp"
         android:text="어느 방을 들어갈까!"
+        android:layout_margin="75dp"
         tools:layout_editor_absoluteX="121dp"
         tools:layout_editor_absoluteY="114dp" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/button10"
+        android:layout_width="239dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="50dp"
+        android:text="방1"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="505dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_marginBottom="50dp"
+        android:layout_width="239dp"
+        android:layout_height="45dp"
+        android:text="방2"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="198dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_marginBottom="50dp"
+        android:layout_width="239dp"
+        android:layout_height="45dp"
+        android:text="방3"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_marginBottom="50dp"
+        android:layout_width="239dp"
+        android:layout_height="45dp"
+        android:text="방4"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <Button
+        android:id="@+id/fourthtosecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" prev"
+        android:layout_margin="60dp"
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="650dp" />
 
@@ -58,8 +75,10 @@
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="60dp"
         android:text="next "
         tools:layout_editor_absoluteX="269dp"
         tools:layout_editor_absoluteY="650dp" />
-
+</LinearLayout>
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
