@@ -5,63 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ThirdPage">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="인원 선택하기"
-        android:layout_margin="125dp"
-        android:layout_gravity="center"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="178dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="선물 선택하기"
-        android:layout_margin="25dp"
-        android:layout_gravity="center"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="341dp" />
-
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="192dp"
-        android:layout_height="41dp"
-        android:text="여기다가 콤보박스 추가 예정"
-        android:layout_marginBottom="170dp"
-        android:layout_gravity="center"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="393dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
-    <Button
-        android:id="@+id/thirdtosecond"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" prev"
-        android:layout_margin="60dp"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="629dp" />
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="next "
-        android:layout_margin="60dp"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="629dp" />
-</LinearLayout>
-</LinearLayout>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="125dp"
+            android:text="인원 선택하기"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="178dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:text="선물 선택하기"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="170dp"
+            android:text="여기다가 콤보박스 추가 예정"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="393dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/thirdtosecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                android:text=" prev"
+                tools:layout_editor_absoluteX="65dp"
+                tools:layout_editor_absoluteY="629dp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                android:text="next "
+                tools:layout_editor_absoluteX="246dp"
+                tools:layout_editor_absoluteY="629dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

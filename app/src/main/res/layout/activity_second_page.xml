@@ -19,9 +19,13 @@
             android:layout_height="105dp"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="게임 참여하기 버튼"
+            android:text="스겜하러 가기"
             tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="203dp" />
+            tools:layout_editor_absoluteY="203dp"
+            android:background="@drawable/buttonbackground"
+            android:fontFamily="@font/jalnan"
+            android:textSize="30dp"
+            />
 
         <Button
             android:id="@+id/createroom"
@@ -29,7 +33,10 @@
             android:layout_height="105dp"
             android:layout_gravity="center"
             android:layout_margin="100dp"
-            android:text="방 만들기 버튼"
+            android:text="방 만들래"
+            android:background="@drawable/buttonbackground"
+            android:fontFamily="@font/jalnan"
+            android:textSize="30dp"
             tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="387dp" />
 
@@ -43,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="60dp"
-                android:text=" prev"
+                android:text="게임 종료"
                 tools:layout_editor_absoluteX="64dp"
                 tools:layout_editor_absoluteY="636dp" />
 
@@ -52,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="60dp"
-                android:text="next "
+                android:text="내 지갑"
                 tools:layout_editor_absoluteX="261dp"
                 tools:layout_editor_absoluteY="636dp" />
         </LinearLayout>
