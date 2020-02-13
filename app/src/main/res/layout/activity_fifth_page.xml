@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="214dp" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/fifthtoreward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="보상 받으러 가기"

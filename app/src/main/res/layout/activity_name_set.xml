@@ -21,7 +21,7 @@
         android:src="@drawable/pen"
         android:layout_gravity="center"/>
 
-    <android.inputmethodservice.ExtractEditText
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="닉네임을 설정해주세요."/>
