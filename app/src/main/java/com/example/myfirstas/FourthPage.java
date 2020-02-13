@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class FourthPage extends AppCompatActivity {
 
+
+    Button chichenBtn;
     Button fourthtosecondBtn;
 
     @Override
@@ -16,7 +18,19 @@ public class FourthPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth_page);
 
+        chichenBtn = findViewById(R.id.chichen);
         fourthtosecondBtn = findViewById(R.id.fourthtosecond);
+
+
+        chichenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),WaitRoom.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         fourthtosecondBtn.setOnClickListener(new View.OnClickListener() {
             @Override
