@@ -46,15 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="-3dp" />
 
-        <Button
-            android:id="@+id/generateAccount"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="generateAccount"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="46dp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -63,13 +55,7 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/getAccount"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="getaccount"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="94dp" />
+
 
 
         <Button
@@ -80,27 +66,7 @@
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="135dp" />
 
-        <Button
-            android:id="@+id/sendsmartcontractapi"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="sendsmartcontractapi"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="183dp" />
-
-        <Button
-            android:id="@+id/cucumverwebview"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:text="cucumver" />
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/webviewer"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="webviewer" />
 
 
         <TextView
