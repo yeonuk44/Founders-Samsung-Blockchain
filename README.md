@@ -57,7 +57,9 @@ BM 1234의 요소를 추가하는 형태도 가능, 혹은 특정 모델만 채�
 ## Unreal Project (bomul) -- Update 20/02/12
 - bomul 폴더
 - Unreal Engine4 기반 게임프로그램입니다.  
-- 용량이 너무 커서(약 6GB) .gitignore txt로 줄인 뒤 commit합니다. 
+- 용량이 너무 커서(약 6GB) .gitignore txt로 줄인 뒤 commit합니다.
+-  https://drive.google.com/drive/folders/1fTMB3LtBQH14AewwqbWYEE57RGISkAMI?usp=sharing 
+    -> 구글 드라이브 전체 위치, 올리지 못한 파일들이 전부 공유되어 있습니다. 
 - pull하는 방법은 제가 추후에 google Drive에 전체 폴더를 압축해서 올리면 
     압축 푸신 뒤에 그 폴더에 pull하게 되면 자동으로 merge가 되면서 
     최신 버전으로 업데이트 될 것입니다. 
