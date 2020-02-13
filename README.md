@@ -5,6 +5,14 @@ Prepare Hackathon
 - JAVA
 - Android Studio
 
+## 기획팀 to do list
+[ ] 사업계획서
+[ ] PPT
+[ ] BM 설계
+[ ] 재무재표
+[] Logo design
+[ ] 영상 편집
+
 ### business plan
 #### write : OH-dong99
 - <겟차 크레용 - 기프티콘 전쟁>
