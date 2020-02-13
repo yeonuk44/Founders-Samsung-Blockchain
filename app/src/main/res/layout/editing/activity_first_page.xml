@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".FirstPage">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="334dp"
+        android:layout_height="207dp"
+        android:src="@drawable/logo"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="211dp" />
+
     <Button
         android:id="@+id/Logo"
 
@@ -18,20 +26,18 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:text="겟챠 크레용"
+        android:text="게임하러 가는 버튼"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="212dp" />
+        tools:layout_editor_absoluteY="476dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#3F51B5"
-        android:text="subtitle"
-        android:textColor="@android:color/white"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="349dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기프티콘 전쟁"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="377dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
