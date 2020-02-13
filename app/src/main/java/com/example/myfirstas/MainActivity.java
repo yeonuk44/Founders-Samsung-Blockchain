@@ -57,12 +57,7 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
     Button nextpageBtn;
     Button FirstPageBtn;
     Button connectBtn;
-    //Button generateAccountBtn;
-    Button getAccountsBtn;
     Button paymentBtn;
-    Button sendsmartcontractapiBtn;
-    Button cucumverBtn;
-    Button webviewerBtn;
 
     CheckBox cb1;
     CheckBox cb2;
@@ -76,11 +71,7 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
 
 
     SBlockchain sBlockchain = new SBlockchain();
-
-    private CucumberWebView webView;
     private HardwareWallet wallet;
-    private Account mAccount;
-
 
 
 
@@ -132,31 +123,7 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
 
 
         //generateAccountBtn = findViewById(R.id.generateAccount);
-        getAccountsBtn = findViewById(R.id.getAccount);
         paymentBtn = findViewById(R.id.payment);
-        sendsmartcontractapiBtn = findViewById(R.id.sendsmartcontractapi);
-        cucumverBtn = findViewById(R.id.cucumverwebview);
-        webviewerBtn = findViewById(R.id.webviewer);
-
-
-        cucumverBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CoinNetworkInfo coinNetworkInfo = new CoinNetworkInfo(
-                        CoinType.ETH,
-                        EthereumNetworkType.ROPSTEN,
-                        "https://ropsten.infura.io/v3/c390e494bf26472ab6cf48f14be05495"
-                );
-                List<Account> accounts = sBlockchain.getAccountManager()
-                        .getAccounts(
-                                wallet.getWalletId(),
-                                CoinType.ETH,
-                                EthereumNetworkType.ROPSTEN
-                        );
-
-
-            }
-        });
 
 
         nextpageBtn.setOnClickListener(new View.OnClickListener() {
@@ -196,20 +163,6 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
             }
         });
 
-//        generateAccountBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                generate();
-//
-//            }
-//        });
-
-        getAccountsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getAccounts();
-            }
-        });
 
         paymentBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -255,17 +208,16 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
         startActivityForResult(intent,0);
     }
 
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void getAccounts(){
-        List<Account> accounts = sBlockchain.getAccountManager()
-                .getAccounts(wallet.getWalletId(), CoinType.ETH, EthereumNetworkType.ROPSTEN);
-        Log.d("Myapp", Arrays.toString(new List[]{accounts}));
 
-    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -273,6 +225,9 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
+
 
     private void connect(){
         sBlockchain.getHardwareWalletManager()
@@ -295,36 +250,6 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
                 });
     }
 
-//    private void generate(){
-//        CoinNetworkInfo coinNetworkInfo = new CoinNetworkInfo(
-//                CoinType.ETH,
-//                EthereumNetworkType.ROPSTEN,
-//                "https://ropsten.infura.io/v3/c390e494bf26472ab6cf48f14be05495"
-//        );
-//
-//        sBlockchain.getAccountManager()
-//                .generateNewAccount(wallet,coinNetworkInfo)
-//                .setCallback(new ListenableFutureTask.Callback<Account>() {
-//                    @Override
-//                    public void onSuccess(Account account) {
-//                        mAccount = account;
-//                        Log.d("MyApp",account.toString());
-//                    }
-//
-//                    @Override
-//                    public void onFailure(@NotNull ExecutionException e) {
-//                        Log.d("MyApp",e.getMessage());
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NotNull InterruptedException e) {
-//
-//                    }
-//                });
-//
-//        }
-
-
 
 
     @Override
@@ -343,7 +268,12 @@ public class MainActivity extends AppCompatActivity implements OnSendTransaction
     }
 
     @Override
-    public void onSendTransaction(@NotNull String s, @NotNull EthereumAccount ethereumAccount, @NotNull String s1, @org.jetbrains.annotations.Nullable BigInteger bigInteger, @org.jetbrains.annotations.Nullable String s2, @org.jetbrains.annotations.Nullable BigInteger bigInteger1) {
+    public void onSendTransaction(@NotNull String s,
+                                  @NotNull EthereumAccount ethereumAccount,
+                                  @NotNull String s1,
+                                  @org.jetbrains.annotations.Nullable BigInteger bigInteger,
+                                  @org.jetbrains.annotations.Nullable String s2,
+                                  @org.jetbrains.annotations.Nullable BigInteger bigInteger1) {
 
     }
 }
