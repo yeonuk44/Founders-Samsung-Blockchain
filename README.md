@@ -28,7 +28,7 @@ just **git clone** or **download zip file** and import project at Android Studio
 ## Role 
 
 - 김연욱[PL] : DApp developer : [깃허브](https://github.com/yeonuk44)
-- 송민재 : 3D modeling engineer :  [깃허브](www,github.com/hsu-201458085)
+- 송민재 : 3D modeling engineer :  [깃허브](https://github.com/hsu-201458085)
 - 유지원 : General designer : [깃허브](https://github.com/AshleyRyu)
 - 조은희 : Architecture planner 
 - 오동규 : Business planner 
