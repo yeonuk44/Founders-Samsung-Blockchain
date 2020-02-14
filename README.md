@@ -1,29 +1,54 @@
-# Founders-Samsung
-Prepare Hackathon
+# BlockChain based Treasure Hunt Game ;Founders-Samsung Hackathon
+:Prepare Hackathon:
+
+## Summary
+
+![image-20200214144756532](image/image-20200214144756532.png)
+
+##  How to use
+
+just **git clone** or **download zip file** and import project at Android Studio
+
+```latex
+  *Requremnts*
+  - andrioid developer mode
+  - ASTC usable android device
+  - device must be connected when Install_bomul-Android-Shipping-armv7-es2.bat is excuting
+```
+
+
 
 ## Tech Stack
+
 - JAVA
 - Android Studio
 
+
+
 ## Role 
-- DApp developer : 김연욱
-- 3D modeling engineer : 송민재
-- General designer : 유지원
-- Architecture planner : 조은희
-- Business planner : 오동규
+
+- 김연욱[PL] : DApp developer : [깃허브](https://github.com/yeonuk44)
+- 송민재 : 3D modeling engineer :  [깃허브](www,github.com/hsu-201458085)
+- 유지원 : General designer : [깃허브](https://github.com/AshleyRyu)
+- 조은희 : Architecture planner 
+- 오동규 : Business planner 
+
+
 
 ## 기획팀 to do list
+
 - [x] 사업계획서
 - [x] PPT
 - [x] BM 설계
 - [x] 재무재표
 - [x] Logo design
-- [ ] 영상 편집
+- [x] 영상 편집
 - [x] Team logo design
 
 ## 사업계획서
 
 ### 1. Problem & Solution
+
 ‘블록체인’이라는 기술이 이슈로 급부상한지 약 4년의 시간이 흘렀다. 그러나 여전히 대중은 블록체인의 개념 정도만 알고 있지, 어디에 사용되는 기술인지, 이를 활용하여 무엇을 할 수 있는지는 모르고 있는 경우가 많다. 블록체인 관련 스타트업뿐 아니라 대기업 역시 산업에 적극적으로 뛰어들고 있다. 이러한 다각적인 노력에도, 여전히 블록체인은 생소하다. 
 본 팀은 이러한 현상에 집중하였고, 유저 친화적인 채널과 가벼운 콘텐츠의 부재를 원인으로 꼽았다. 게임은 접근성 제고를 위해 가장 좋은 콘텐츠라 판단하였다. 블록체인 기술은 보상시스템의 투명성을 높이고, 초기 신뢰형성기간을 단축할 것을 기대한다. SDK의 활용은 월렛 및 키관리 등 유저사용의 제약요소를 해소할 수 있을 것이라 판단하였다.
 현황을 살펴보면, 삼성은 블록체인 산업을 육성하고자 ‘삼성 블록체인 월렛’을 만들었으며, 여기에 다양한 DApp들을 출시하였다. 살펴본 결과, 블록체인 기술 상용화를 위해 다수의 게임Dapp이 서비스 중에 있었다. 그러나 대부분의 게임Dapp은 실적이 좋지 못한 편이다. 특히, 게임물관리 위원회의 통과를 받은 게임은 전무하며, 관련 법규 역시 애매한 실정이다. 외부적 요인 이외에도, 콘텐츠 자체가 사용자들에게 매력적으로 다가가지 못하고 있다. 본 팀은 이와 관련된 이유들을 분석하여, 다양한 개선점들을 보완하여 본 서비스를 기획하였다.
