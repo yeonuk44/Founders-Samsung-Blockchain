@@ -5,6 +5,13 @@ Prepare Hackathon
 - JAVA
 - Android Studio
 
+## Role 
+- DApp developer : 김연욱
+- 3D modeling engineer : 송민재
+- General designer : 유지원
+- Architecture planner : 조은희
+- Business planner : 오동규
+
 ## 기획팀 to do list
 - [x] 사업계획서
 - [x] PPT
