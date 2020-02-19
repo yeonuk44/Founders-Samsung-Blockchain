@@ -23,6 +23,8 @@ just **git clone** or **download zip file** and import project at Android Studio
 - JAVA
 - Android Studio
 
+## Tech Demo Video
+[youtube link](https://youtu.be/tjttqUkZST8)
 
 
 ## Role 
